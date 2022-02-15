@@ -8,6 +8,7 @@ Tags 3.3 and 3.4 are also provided for your convenience but are not fully tested
 Tag 3.5 ~ latest
 
 ## What is inside
+
 This is a Docker Image for a RStudio environement based on 
 [rocker/verse](https://hub.docker.com/r/rocker/verse/) from the awesome [Rocker Project](https://www.rocker-project.org/) with the following Tools added for Bayesian modelling:
 
@@ -24,20 +25,26 @@ This is a Docker Image for a RStudio environement based on
 * [brms](https://github.com/paul-buerkner/brms)
 
 ## How to use it
+
 Since this image is based on [rocker/verse](https://hub.docker.com/r/rocker/verse/), I suggest their excellent documentation on how to use it:
 [Using the RStudio image](https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image)
 
 in a nutshell:
 
 get the image from docker hub:
+
 ```bash
 docker pull mavelli/rocker-bayesian
 ```
+
 run a container:
+
 ```bash
-docker run -d -p 8787:8787 mavelli/rocker-bayesian
+docker run -e PASSWORD=qwerty -d -p 8787:8787 mavelli/rocker-bayesian
 ```
+
 connect to rstudio in a webbrowser at
+
 ```url
 localhost:8787
 ```
